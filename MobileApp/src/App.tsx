@@ -2,6 +2,7 @@ import type { FC } from 'react'
 import { TabBar } from 'antd-mobile'
 import Today from './pages/Today'
 import Records from './pages/Records'
+import Aims from './pages/Aims'
 import {
   Route,
   Switch,
@@ -89,10 +90,6 @@ function App() {
   )
 }
 
-
-function Aims() {
-  return <div>目标</div>
-}
 
 function History() {
   return <div>历史</div>
