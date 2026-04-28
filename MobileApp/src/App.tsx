@@ -1,6 +1,7 @@
 import type { FC } from 'react'
 import { TabBar } from 'antd-mobile'
 import Today from './pages/Today'
+import Records from './pages/Records'
 import {
   Route,
   Switch,
@@ -11,8 +12,8 @@ import {
 import {
   AddCircleOutline,
   CalendarOutline,
-  ClockCircleOutline,
-  FlagOutline,
+  CompassOutline,
+  PieOutline,
 } from 'antd-mobile-icons'
 
 import './demo2.less'
@@ -30,7 +31,7 @@ const Bottom: FC = () => {
     {
       key: '/today',
       title: '今日',
-      icon: <ClockCircleOutline />,
+      icon: <PieOutline />,
     },
     {
       key: '/records',
@@ -40,7 +41,7 @@ const Bottom: FC = () => {
     {
       key: '/aims',
       title: '目标',
-      icon: <FlagOutline />,
+      icon: <CompassOutline />,
     },
     {
       key: '/history',
@@ -88,10 +89,6 @@ function App() {
   )
 }
 
-
-function Records() {
-  return <div>记录</div>
-}
 
 function Aims() {
   return <div>目标</div>
