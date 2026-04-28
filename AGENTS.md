@@ -34,3 +34,7 @@
 - 保持改动聚焦，不做无关重构。
 - 有新增页面、路由、数据模型、接口草案或关键决策时，更新 `PROGRESS.md`。
 - 如果新会话缺少上下文，优先从 `AGENTS.md` 和 `PROGRESS.md` 恢复项目状态，不要求用户重新描述进度。
+
+## Git 约定
+
+- Git 相关命名和说明统一使用英文，包括 commit message、branch name、tag、PR 标题和 PR 描述。
