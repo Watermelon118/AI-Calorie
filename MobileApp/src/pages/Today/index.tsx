@@ -1,5 +1,16 @@
 import { useState } from 'react'
 import { Card, Grid, List, Swiper } from 'antd-mobile'
+import {
+  ArrowDownCircleOutline,
+  CheckCircleFill,
+  ClockCircleOutline,
+  DownCircleOutline,
+  FireFill,
+  HeartFill,
+  ShopbagOutline,
+  TravelOutline,
+  UpCircleOutline,
+} from 'antd-mobile-icons'
 import './index.less'
 
 function Today() {
@@ -11,7 +22,7 @@ function Today() {
       <div className='today-header'>
         <h1>今日概览</h1>
         <div className={`source-badge ${isRealtime ? 'realtime' : 'estimate'}`}>
-          <span>{isRealtime ? '⌚' : 'f(x)'}</span>
+          <span>{isRealtime ? <ClockCircleOutline /> : 'f(x)'}</span>
           {isRealtime ? '实时' : '估算'}
         </div>
       </div>
@@ -22,7 +33,7 @@ function Today() {
             <Card className='summary-card'>
               <div className='summary-row'>
                 <div className='summary-item'>
-                  <div className='summary-icon orange'>🍴</div>
+                  <div className='summary-icon orange'><ShopbagOutline /></div>
                   <div className='summary-value'>626</div>
                   <div className='summary-label'>摄入</div>
                 </div>
@@ -30,7 +41,7 @@ function Today() {
                 <div className='summary-operator'>-</div>
 
                 <div className='summary-item'>
-                  <div className='summary-icon red'>🔥</div>
+                  <div className='summary-icon red'><FireFill /></div>
                   <div className='summary-value'>1732</div>
                   <div className='summary-label'>消耗</div>
                 </div>
@@ -38,14 +49,14 @@ function Today() {
                 <div className='summary-operator'>=</div>
 
                 <div className='summary-item'>
-                  <div className='summary-icon green'>↓</div>
+                  <div className='summary-icon green'><ArrowDownCircleOutline /></div>
                   <div className='summary-value green'>1106</div>
                   <div className='summary-label'>缺口</div>
                 </div>
               </div>
 
               <div className='summary-footer'>
-                <div className='summary-left'>✓ 还可吃 831 kcal</div>
+                <div className='summary-left'><CheckCircleFill />还可吃 831 kcal</div>
                 <div className='summary-right'>目标缺口 274 kcal</div>
               </div>
             </Card>
@@ -57,19 +68,19 @@ function Today() {
 
               <div className='detail-row'>
                 <div className='detail-item'>
-                  <div className='detail-icon purple'>🛏</div>
+                  <div className='detail-icon purple'><HeartFill /></div>
                   <div className='detail-value'>1,259</div>
                   <div className='detail-label'>基础代谢</div>
                 </div>
 
                 <div className='detail-item'>
-                  <div className='detail-icon green'>🚶</div>
+                  <div className='detail-icon green'><TravelOutline /></div>
                   <div className='detail-value'>472</div>
                   <div className='detail-label'>活动消耗(估)</div>
                 </div>
 
                 <div className='detail-item'>
-                  <div className='detail-icon orange'>🔥</div>
+                  <div className='detail-icon orange'><FireFill /></div>
                   <div className='detail-value'>1,732</div>
                   <div className='detail-label'>总消耗</div>
                 </div>
@@ -83,7 +94,7 @@ function Today() {
             <Card className='summary-card'>
               <div className='summary-row'>
                 <div className='summary-item'>
-                  <div className='summary-icon orange'>🍴</div>
+                  <div className='summary-icon orange'><ShopbagOutline /></div>
                   <div className='summary-value'>626</div>
                   <div className='summary-label'>摄入</div>
                 </div>
@@ -91,7 +102,7 @@ function Today() {
                 <div className='summary-operator'>-</div>
 
                 <div className='summary-item'>
-                  <div className='summary-icon red'>🔥</div>
+                  <div className='summary-icon red'><FireFill /></div>
                   <div className='summary-value'>1293</div>
                   <div className='summary-label'>消耗</div>
                 </div>
@@ -99,14 +110,14 @@ function Today() {
                 <div className='summary-operator'>=</div>
 
                 <div className='summary-item'>
-                  <div className='summary-icon green'>↓</div>
+                  <div className='summary-icon green'><ArrowDownCircleOutline /></div>
                   <div className='summary-value green'>667</div>
                   <div className='summary-label'>缺口</div>
                 </div>
               </div>
 
               <div className='summary-footer'>
-                <div className='summary-left'>✓ 还可吃 392 kcal</div>
+                <div className='summary-left'><CheckCircleFill />还可吃 392 kcal</div>
                 <div className='summary-right'>目标缺口 274 kcal</div>
               </div>
             </Card>
@@ -118,19 +129,19 @@ function Today() {
 
               <div className='detail-row'>
                 <div className='detail-item'>
-                  <div className='detail-icon purple'>🛏</div>
+                  <div className='detail-icon purple'><HeartFill /></div>
                   <div className='detail-value'>1,259</div>
                   <div className='detail-label'>基础代谢</div>
                 </div>
 
                 <div className='detail-item'>
-                  <div className='detail-icon green'>⌚</div>
+                  <div className='detail-icon green'><ClockCircleOutline /></div>
                   <div className='detail-value'>33</div>
                   <div className='detail-label'>活动消耗</div>
                 </div>
 
                 <div className='detail-item'>
-                  <div className='detail-icon orange'>🔥</div>
+                  <div className='detail-icon orange'><FireFill /></div>
                   <div className='detail-value'>1,293</div>
                   <div className='detail-label'>总消耗</div>
                 </div>
@@ -145,6 +156,7 @@ function Today() {
       <Grid columns={3} gap={12} className='nutrition-grid'>
         <Grid.Item>
           <div className='nutrition-card protein'>
+            <div className='nutrition-mark'><UpCircleOutline /></div>
             <div className='nutrition-label'>蛋白质</div>
             <div className='nutrition-value'>40.8</div>
             <div className='nutrition-unit'>g</div>
@@ -153,6 +165,7 @@ function Today() {
 
         <Grid.Item>
           <div className='nutrition-card carbs'>
+            <div className='nutrition-mark'><DownCircleOutline /></div>
             <div className='nutrition-label'>碳水</div>
             <div className='nutrition-value'>47.8</div>
             <div className='nutrition-unit'>g</div>
@@ -161,6 +174,7 @@ function Today() {
 
         <Grid.Item>
           <div className='nutrition-card fat'>
+            <div className='nutrition-mark'><FireFill /></div>
             <div className='nutrition-label'>脂肪</div>
             <div className='nutrition-value'>25.4</div>
             <div className='nutrition-unit'>g</div>

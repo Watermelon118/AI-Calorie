@@ -9,10 +9,10 @@ import {
   MemoryRouter as Router,
 } from 'react-router-dom'
 import {
-  AppOutline,
-  MessageOutline,
-  UnorderedListOutline,
-  UserOutline,
+  AddCircleOutline,
+  CalendarOutline,
+  ClockCircleOutline,
+  FlagOutline,
 } from 'antd-mobile-icons'
 
 import './demo2.less'
@@ -30,22 +30,22 @@ const Bottom: FC = () => {
     {
       key: '/today',
       title: '今日',
-      icon: <AppOutline />,
+      icon: <ClockCircleOutline />,
     },
     {
       key: '/records',
       title: '记录',
-      icon: <UnorderedListOutline />,
+      icon: <AddCircleOutline />,
     },
     {
       key: '/aims',
       title: '目标',
-      icon: <MessageOutline />,
+      icon: <FlagOutline />,
     },
     {
       key: '/history',
       title: '历史',
-      icon: <UserOutline />,
+      icon: <CalendarOutline />,
     },
   ]
 

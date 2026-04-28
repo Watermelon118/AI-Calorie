@@ -16,6 +16,24 @@
 }
 
 .bottom {
-  flex: 0;
-  border-top: solid 1px var(--adm-color-border);
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 18px;
+  z-index: 20;
+  padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 44px rgba(31, 35, 41, 0.14);
+  backdrop-filter: blur(18px);
+}
+
+.bottom .adm-tab-bar-item {
+  border-radius: 999px;
+  padding: 7px 0;
+}
+
+.bottom .adm-tab-bar-item-active {
+  background: #eef3ff;
 }
